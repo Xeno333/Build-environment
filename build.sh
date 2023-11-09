@@ -11,6 +11,9 @@ if test -f ./OUT/IMG/Disk.vdi; then
 fi
 
 echo 'Making empty image.'
+if ! test -f ./RAW/IMG_GPT.img; then
+	tar -xf ./RAW/IMG_GPT.tar.xz
+fi
 cp ./RAW/IMG_GPT.img ./OUT/IMG/Img.img
 
 echo
