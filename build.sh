@@ -12,7 +12,9 @@ fi
 
 echo 'Making empty image.'
 if ! test -f ./RAW/IMG_GPT.img; then
-	tar -xf ./RAW/IMG_GPT.tar.xz
+	cd ./RAW
+	tar -xf ./IMG_GPT.tar.xz
+	cd ..
 fi
 cp ./RAW/IMG_GPT.img ./OUT/IMG/Img.img
 
